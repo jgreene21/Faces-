@@ -1,0 +1,13 @@
+<h1>Faces</h1>
+<p><%= link_to 'New Face' , new_face_path %></p>
+
+<% @faces.each do |face| %>
+<h2><%= face.first_name %></h2>
+
+
+<%= link_to 'View', face_path(face) %>
+
+<%= link_to 'Edit', edit_face_path(face) %>
+
+<%= link_to 'Delete', face, method: :delete %>
+<% end %>
